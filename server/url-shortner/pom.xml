@@ -44,38 +44,45 @@
             <scope>test</scope>
         </dependency>
 
-		<!--BASE62 Dependency-->
-		<dependency>
-			<groupId>io.seruco.encoding</groupId>
-			<artifactId>base62</artifactId>
-			<version>0.1.0</version>
-		</dependency>
+        <!--BASE62 Dependency-->
+        <dependency>
+            <groupId>io.seruco.encoding</groupId>
+            <artifactId>base62</artifactId>
+            <version>0.1.0</version>
+        </dependency>
 
         <!-- Spring Security -->
-        <!-- <dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
-        </dependency> -->
+        </dependency>
 
         <!-- JPA -->
-        <!-- <dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency> -->
+        </dependency>
 
         <!-- PostgreSQL -->
-        <!-- <dependency>
+        <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
-        </dependency> -->
+            <scope>runtime</scope>
+        </dependency>
 
         <!-- JWT -->
-        <!-- <dependency>
+        <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt</artifactId>
             <version>0.9.1</version>
-        </dependency> -->
+        </dependency>
 
+        <!-- to use .env file -->
+        <dependency>
+            <groupId>io.github.cdimascio</groupId>
+            <artifactId>dotenv-java</artifactId>
+            <version>3.0.0</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
