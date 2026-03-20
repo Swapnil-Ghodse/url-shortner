@@ -1,6 +1,7 @@
 package com.mybackendproj.url_shortner.api;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import io.seruco.encoding.base62.Base62;
@@ -29,5 +30,10 @@ public class DemoController {
 
     public String getOriginal(String base62_test){
         return new String( base62.decode(base62_test.getBytes()) );
+    }
+
+    @GetMapping("/{link_id}")
+    public String linkToLink(@PathVariable("link_id") String linkString){
+        return linkString;
     }
 }
