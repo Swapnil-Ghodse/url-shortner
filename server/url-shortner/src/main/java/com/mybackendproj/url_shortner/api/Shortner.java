@@ -31,10 +31,11 @@ public class Shortner {
         return new ResponseLinkDTO("Ironman", url);
     }
 
-    @GetMapping("/{encode_url}")
+    @GetMapping("/api/{encode_url}")
     public ResponseLinkDTO getOriginalLink(@PathVariable("encode_url") String encoded_url){
         String url = controllerShortner.decodeShortner(encoded_url);
 
+        
          return new ResponseLinkDTO("Ironman", url);
     }
 
